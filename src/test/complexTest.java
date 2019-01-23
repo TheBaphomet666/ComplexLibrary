@@ -22,9 +22,20 @@ public class complexTest {
     }
 
     @Test
-    public void shoulddivide(){
+    public void shouldDivide(){
         Assert.assertTrue(ComplexCalculator.divide(new ComplexNumber(-2,1),new ComplexNumber(1,2)).equals(new ComplexNumber(0,1)));
 
+    }
+    @Test
+    public void shouldModulus(){
+       // System.out.println(new ComplexNumber(1,-1).modulus()+"   "+Math.sqrt(2));
+        Assert.assertEquals(new ComplexNumber(1,-1).modulus(),Math.sqrt(2),0);
+
+    }
+
+    @Test
+    public void shouldConjugate(){
+        Assert.assertTrue(new ComplexNumber(1,-8).conjugation().equals(new ComplexNumber(1,8)));
     }
 
 }

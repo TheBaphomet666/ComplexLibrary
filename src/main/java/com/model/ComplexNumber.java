@@ -52,4 +52,23 @@ public class ComplexNumber {
     public int hashCode() {
         return Objects.hash(realPart, imaginaryPart);
     }
+
+    /**
+     * This method Returns the modulus of the ComplesNumber
+     * @return Returns a double that is the modulus of the complex number.
+     */
+    public double modulus(){
+        return Math.sqrt(Math.pow(realPart,2)+Math.pow(imaginaryPart,2));
+
+    }
+
+    /**
+     * This Method conjugates the complex number
+     * @return returns a ComplexNumber result of the Conjugation of the number.
+     */
+    public ComplexNumber conjugation(){
+        return new ComplexNumber(realPart,imaginaryPart*-1);
+    }
+
+
 }
