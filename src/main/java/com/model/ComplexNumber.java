@@ -35,8 +35,12 @@ public class ComplexNumber {
                 ", imaginaryPart=" + imaginaryPart +
                 '}';
     }
-    public String toStringAsNotation() {
+    public String toStringAsCartesian() {
         return "("+realPart+","+imaginaryPart+")";
+    }
+
+    public String toStringAspolar(){
+        return "("+modulus()+","+phase()+")";
     }
 
     @Override
@@ -54,7 +58,7 @@ public class ComplexNumber {
     }
 
     /**
-     * This method Returns the modulus of the ComplesNumber
+     * This method Returns the modulus of the ComplexNumber
      * @return Returns a double that is the modulus of the complex number.
      */
     public double modulus(){
@@ -63,11 +67,19 @@ public class ComplexNumber {
     }
 
     /**
-     * This Method conjugates the complex number
+     * This Method conjugates the complex number.
      * @return returns a ComplexNumber result of the Conjugation of the number.
      */
     public ComplexNumber conjugation(){
         return new ComplexNumber(realPart,imaginaryPart*-1);
+    }
+
+    /**
+     * This method Returns the Phase of the complex number.
+     * @return A double result of the phase os the number.
+     */
+    public double phase(){
+        return Math.atan(imaginaryPart/realPart);
     }
 
 

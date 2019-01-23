@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1093a654-96f3-47e1-a3d9-bf05453b8e1c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/target/production/ComplexLibrary/com/model/ComplexNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/target/production/ComplexLibrary/com/model/ComplexNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/target/test/ComplexLibrary/complexTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/target/test/ComplexLibrary/complexTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/complexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/complexTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="352">
+              <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
               <folding>
                 <element signature="e#298#299#0" expanded="true" />
                 <element signature="e#329#330#0" expanded="true" />
@@ -31,10 +28,14 @@
                 <element signature="e#601#602#0" expanded="true" />
                 <element signature="e#843#844#0" expanded="true" />
                 <element signature="e#900#901#0" expanded="true" />
+                <element signature="e#969#970#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
                 <element signature="e#1314#1315#0" expanded="true" />
                 <element signature="e#1374#1375#0" expanded="true" />
                 <element signature="e#1822#1823#0" expanded="true" />
                 <element signature="e#1889#1890#0" expanded="true" />
+                <element signature="e#2047#2048#0" expanded="true" />
+                <element signature="e#2103#2104#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,7 +88,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="293" />
     <option name="y" value="53" />
     <option name="width" value="1400" />
@@ -168,7 +169,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548257322923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548258051291" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ParcialFinalArsw" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -215,9 +216,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="complexTest - 2019.01.23 at 10h 06m 53s.xml">
-      <configuration name="complexTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="complexTest - 2019.01.23 at 10h 07m 00s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
@@ -245,6 +243,9 @@
     <history-entry file="complexTest - 2019.01.23 at 10h 26m 04s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="complexTest - 2019.01.23 at 10h 26m 35s.xml">
+      <configuration name="complexTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="293" y="53" width="1400" height="1000" extended-state="0" />
@@ -255,7 +256,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963072" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -263,7 +264,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3295063" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295063" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295063" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -298,8 +299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="352">
+          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
           <folding>
             <element signature="e#298#299#0" expanded="true" />
             <element signature="e#329#330#0" expanded="true" />
@@ -311,10 +312,14 @@
             <element signature="e#601#602#0" expanded="true" />
             <element signature="e#843#844#0" expanded="true" />
             <element signature="e#900#901#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
             <element signature="e#1314#1315#0" expanded="true" />
             <element signature="e#1374#1375#0" expanded="true" />
             <element signature="e#1822#1823#0" expanded="true" />
             <element signature="e#1889#1890#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
           </folding>
         </state>
       </provider>
