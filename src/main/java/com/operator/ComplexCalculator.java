@@ -36,5 +36,17 @@ public class ComplexCalculator {
         return new ComplexNumber(a.getRealPart()*b.getRealPart()-a.getImaginaryPart()*b.getImaginaryPart(),a.getRealPart()*b.getImaginaryPart()+a.getImaginaryPart()*b.getRealPart());
     }
 
+    /**
+     * This Method Divides a by b.
+     * @param a Dividend.
+     * @param b Divisor
+     * @return Returns a ComplexNumber as the result of dividing a by b.
+     */
+    public static ComplexNumber divide(ComplexNumber a,ComplexNumber b){
+        double x = (a.getRealPart()*b.getRealPart()+a.getImaginaryPart()*b.getImaginaryPart())/(Math.pow(b.getRealPart(),2)+Math.pow(b.getImaginaryPart(),2));
+        double y = (b.getRealPart()*a.getImaginaryPart()-a.getRealPart()*b.getImaginaryPart())/(Math.pow(b.getRealPart(),2)+Math.pow(b.getImaginaryPart(),2));
+        return  new ComplexNumber(x,y);
+    }
+
 
 }

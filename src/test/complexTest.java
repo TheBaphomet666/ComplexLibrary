@@ -21,4 +21,10 @@ public class complexTest {
 
     }
 
+    @Test
+    public void shoulddivide(){
+        Assert.assertTrue(ComplexCalculator.divide(new ComplexNumber(-2,1),new ComplexNumber(1,2)).equals(new ComplexNumber(0,1)));
+
+    }
+
 }
