@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1093a654-96f3-47e1-a3d9-bf05453b8e1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/complexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/complexTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
                 <element signature="e#298#299#0" expanded="true" />
                 <element signature="e#329#330#0" expanded="true" />
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/complexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="307">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/Operator/ComplexCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java" />
-        <option value="$PROJECT_DIR$/src/test/complexTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" />
+        <option value="$PROJECT_DIR$/src/test/complexTest.java" />
       </list>
     </option>
   </component>
@@ -169,7 +169,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548258051291" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548258543804" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ParcialFinalArsw" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -280,16 +280,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/complexTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -300,7 +290,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="71" column="7" lean-forward="true" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
             <element signature="e#298#299#0" expanded="true" />
             <element signature="e#329#330#0" expanded="true" />
@@ -320,6 +310,16 @@
             <element signature="e#1889#1890#0" expanded="true" />
             <element signature="e#2047#2048#0" expanded="true" />
             <element signature="e#2103#2104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/complexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

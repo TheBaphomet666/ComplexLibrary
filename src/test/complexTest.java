@@ -38,4 +38,17 @@ public class complexTest {
         Assert.assertTrue(new ComplexNumber(1,-8).conjugation().equals(new ComplexNumber(1,8)));
     }
 
+    @Test
+    public void shouldShowAsCartesian(){
+        System.out.println(new ComplexNumber(1,1).toStringAsCartesian());
+        Assert.assertTrue(true);
+    }
+
+    @Test
+    public void shouldShowAsPolar(){
+        System.out.println(new ComplexNumber(1,1).toStringAspolar());
+        Assert.assertTrue(true);
+    }
+
+
 }
