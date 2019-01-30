@@ -35,10 +35,19 @@ public class ComplexNumber {
                 ", imaginaryPart=" + imaginaryPart +
                 '}';
     }
+
+    /**
+     * This Method Returns the complex number as Cartesian
+     * @return a String of the number as Cartesian
+     */
     public String toStringAsCartesian() {
         return "("+realPart+","+imaginaryPart+")";
     }
 
+    /**
+     * This Method Returns the complex number as Polar
+     * @return a String of the number as Polar
+     */
     public String toStringAspolar(){
         return "("+modulus()+","+phase()+")";
     }
@@ -77,6 +86,20 @@ public class ComplexNumber {
     /**
      * This method Returns the Phase of the complex number.
      * @return A double result of the phase os the number.
+     */
+
+    /**
+     * Returns the inverse of the Complex Number
+     * @return A Complex Number that is the inverse of the current.
+     */
+    public ComplexNumber inverse(){
+        return new ComplexNumber(realPart*-1,imaginaryPart*-1);
+    }
+
+
+    /**
+     * Returns the Phase of the Complex Number
+     * @return A double that is the Phase of the current.
      */
     public double phase(){
         return Math.atan(imaginaryPart/realPart);
