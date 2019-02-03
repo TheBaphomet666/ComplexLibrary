@@ -1,3 +1,5 @@
+import com.Exceptions.ComplexException;
+import com.model.ComplexMatrix;
 import com.model.ComplexNumber;
 import com.operator.ComplexCalculator;
 import org.junit.Assert;
@@ -51,5 +53,56 @@ public class complexTest {
         Assert.assertTrue(true);
     }
 
+    @Test
+    public void ShouldTransponseMatrices(){
+        ComplexMatrix a= new ComplexMatrix(4,2);
+        try {
+            for(int i=0;i<4;i++){
+                for(int j=0;j<2;j++){
+                    a.put(i,j,new ComplexNumber(i%2+j,j));
+                }
+
+            }
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+        ComplexMatrix b= a.transpose();
+        System.out.println(b);
+        System.out.println(a);
+
+    }
+
+    @Test
+    public void shouldMutiplyMatrices(){
+        ComplexMatrix a= new ComplexMatrix(2,2);
+        ComplexMatrix b= new ComplexMatrix(2,2);
+        ComplexMatrix result= new ComplexMatrix(2,2);
+        try {
+            a.put(0,0,new ComplexNumber(1,0));
+            a.put(0,1,new ComplexNumber(0,-1));
+            a.put(1,0,new ComplexNumber(1,1));
+            a.put(1,1,new ComplexNumber(4,-1));
+
+            b.put(0,0,new ComplexNumber(0,1));
+            b.put(0,1,new ComplexNumber(1,-1));
+            b.put(1,0,new ComplexNumber(2,-3));
+            b.put(1,1,new ComplexNumber(4,0));
+
+            result.put(0,0,new ComplexNumber(-3,-1));
+            result.put(0,1,new ComplexNumber(1,-5));
+            result.put(1,0,new ComplexNumber(4,-13));
+            result.put(1,1,new ComplexNumber(18,-4));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        try {
+            Assert.assertTrue(ComplexCalculator.multiply(a,b).equals(result));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }

@@ -46,12 +46,12 @@ public class ComplexMatrix  {
      * @return A Compled Matrix Transposed.
      */
     public ComplexMatrix transpose(){
-         ComplexMatrix nmatrix= new ComplexMatrix(m,n);
+         ComplexMatrix nmatrix= new ComplexMatrix(n,m);
 
         for(int i=0;i<m;i++){
-            for(int j=0;i<n;j++){
+            for(int j=0;j<n;j++){
                 try {
-                    nmatrix.put(i,j,matrix[j][i]);
+                   nmatrix.put(j,i,matrix[i][j]);
                 } catch (ComplexException e) {
                     e.printStackTrace();
                 }
@@ -139,9 +139,21 @@ public class ComplexMatrix  {
         if (this == o) return true;
         if (!(o instanceof ComplexMatrix)) return false;
         ComplexMatrix that = (ComplexMatrix) o;
-        return m == that.m &&
-                n == that.n &&
-                Arrays.equals(matrix, that.matrix);
+
+        Boolean bol=m == that.m && n == that.n ;
+        if(bol) {
+            for (int i = 0; i < m && bol; i++) {
+                for(int j=0; j<n;j++){
+                    try {
+                        bol =this.get(i,j).equals(that.get(i,j));
+                    } catch (ComplexException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        }
+        return bol;
     }
 
     @Override
@@ -149,5 +161,23 @@ public class ComplexMatrix  {
         int result = Objects.hash(m, n);
         result = 31 * result + Arrays.hashCode(matrix);
         return result;
+    }
+
+    public ComplexNumber[][] getMatrix() {
+        return matrix;
+    }
+
+    @Override
+    public String toString() {
+
+        String ma="";
+        for (int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                ma+="["+matrix[i][j].toStringAsCartesian()+"],";
+            }
+            ma+="\n";
+        }
+
+        return ma;
     }
 }

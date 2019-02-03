@@ -96,7 +96,7 @@ public class ComplexCalculator {
      * @param c The complexNumber
      * @return A new ComplexNumber Result of the Scalar product.
      */
-    public ComplexNumber scalarProduct(int scalar, ComplexNumber c){
+    public static ComplexNumber scalarProduct(int scalar, ComplexNumber c){
 
         return new ComplexNumber(c.getRealPart()*scalar,c.getImaginaryPart()*scalar);
 
@@ -108,7 +108,7 @@ public class ComplexCalculator {
      * @param  c The ComplexMatrix
      * @return A complex Matrix resulted by the scalar product.
      */
-    public ComplexMatrix scalarProduct(int scalar, ComplexMatrix c){
+    public static ComplexMatrix scalarProduct(int scalar, ComplexMatrix c){
 
         ComplexMatrix nmatrix= new ComplexMatrix(c.getM(),c.getN());
         for(int i=0;i<c.getM();i++){
@@ -122,6 +122,26 @@ public class ComplexCalculator {
         }
         return nmatrix;
     }
+
+    public static ComplexMatrix multiply(ComplexMatrix a, ComplexMatrix b) throws ComplexException{
+        if(a.getN()!=b.getM()){
+            throw new ComplexException(ComplexException.NOT_MATCHING_MULTIPLICATION);
+        }
+        ComplexMatrix nmatrix = new ComplexMatrix(a.getM(),b.getN());
+        for(int i=0;i<a.getM();i++){
+            for(int k=0;k<b.getN();k++){
+                ComplexNumber value = new ComplexNumber(0,0);
+                for(int j=0;j<a.getN();j++){
+                    value= sum(value,multiply(a.get(i,j),b.get(j,k)));
+                }
+                nmatrix.put(i,k,value);
+
+            }
+
+        }
+        return nmatrix;
+    }
+
 
 
     private static void checkMatricesSameDimention(ComplexMatrix a, ComplexMatrix b) throws  ComplexException{

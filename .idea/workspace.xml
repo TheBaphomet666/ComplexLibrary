@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1093a654-96f3-47e1-a3d9-bf05453b8e1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/complexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/complexTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,12 +28,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="67">
+              <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3433#3434#0" expanded="true" />
-                <element signature="e#3482#3483#0" expanded="true" />
+                <element signature="e#3430#3431#0" expanded="true" />
+                <element signature="e#3479#3480#0" expanded="true" />
+                <element signature="e#4351#4352#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/complexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="28">
+              <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+            <state relative-caret-position="124">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,10 +97,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/complexTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/complexTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java" />
+        <option value="$PROJECT_DIR$/src/test/java/complexTest.java" />
       </list>
     </option>
   </component>
@@ -208,7 +210,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549207130800" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549212557140" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -256,50 +258,50 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548252623336</updated>
-      <workItem from="1549203648648" duration="3481000" />
+      <workItem from="1549203648648" duration="8464000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="complexTest - 2019.01.23 at 10h 17m 27s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 33m 51s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.23 at 10h 17m 56s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 36m 03s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.23 at 10h 24m 16s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 36m 33s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.23 at 10h 25m 07s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 39m 55s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.23 at 10h 26m 04s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 40m 23s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.23 at 10h 26m 35s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 42m 19s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.30 at 09h 06m 22s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 42m 44s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.30 at 10h 57m 07s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 46m 22s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.30 at 10h 57m 15s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 46m 43s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="complexTest - 2019.01.30 at 11h 03m 46s.xml">
+    <history-entry file="complexTest - 2019.02.03 at 11h 47m 27s.xml">
       <configuration name="complexTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3481000" />
+    <option name="totallyTimeSpent" value="8464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19313647" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19313647" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -310,15 +312,15 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3099352" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30944625" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24958494" />
@@ -329,6 +331,37 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19313647" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.30944625" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39739415" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32899022" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24958494" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -359,16 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/complexTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -376,22 +399,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="124">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3433#3434#0" expanded="true" />
-            <element signature="e#3482#3483#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/operator/ComplexCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/model/ComplexMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="118" column="40" lean-forward="true" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="40" />
+        <state relative-caret-position="67">
+          <caret line="147" column="29" selection-start-line="147" selection-start-column="29" selection-end-line="147" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3430#3431#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#4351#4352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/complexTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="92" column="47" selection-start-line="92" selection-start-column="47" selection-end-line="92" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
