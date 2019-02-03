@@ -90,6 +90,38 @@ public class ComplexCalculator {
         return nmatrix;
     }
 
+    /**
+     * This method Multiplies the Complex Number by a Scalar.
+     * @param scalar Scalar quotient.
+     * @param c The complexNumber
+     * @return A new ComplexNumber Result of the Scalar product.
+     */
+    public ComplexNumber scalarProduct(int scalar, ComplexNumber c){
+
+        return new ComplexNumber(c.getRealPart()*scalar,c.getImaginaryPart()*scalar);
+
+    }
+
+    /**
+     * This method Multiplies the matrix by an scalar.
+     * @param scalar int Scalar about to be applied to the matrix.
+     * @param  c The ComplexMatrix
+     * @return A complex Matrix resulted by the scalar product.
+     */
+    public ComplexMatrix scalarProduct(int scalar, ComplexMatrix c){
+
+        ComplexMatrix nmatrix= new ComplexMatrix(c.getM(),c.getN());
+        for(int i=0;i<c.getM();i++){
+            for(int j=0;i<c.getN();j++){
+                try {
+                    nmatrix.put(i,j,scalarProduct(scalar,c.get(i,j)));
+                } catch (ComplexException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return nmatrix;
+    }
 
 
     private static void checkMatricesSameDimention(ComplexMatrix a, ComplexMatrix b) throws  ComplexException{

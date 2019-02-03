@@ -106,16 +106,7 @@ public class ComplexNumber {
     }
 
 
-    /**
-     * This method Multiplies the Complex Number by a Scalar.
-     * @param scalar Scalar quotient.
-     * @return A new ComplexNumber Result of the Scalar product.
-     */
-    public ComplexNumber scalarProduct(int scalar){
 
-        return new ComplexNumber(this.getRealPart()*scalar,this.getImaginaryPart()*scalar);
-
-    }
 
 
 }

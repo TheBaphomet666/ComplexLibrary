@@ -111,25 +111,7 @@ public class ComplexMatrix  {
         return nmatrix;
     }
 
-    /**
-     * This method Multiplies the matrix by an scalar.
-     * @param scalar int Scalar about to be applied to the matrix.
-     * @return A complex Matrix resulted by the scalar product.
-     */
-    public ComplexMatrix scalarProduct(int scalar){
 
-        ComplexMatrix nmatrix= new ComplexMatrix(m,n);
-        for(int i=0;i<m;i++){
-            for(int j=0;i<n;j++){
-                try {
-                    nmatrix.put(i,j,matrix[i][j].scalarProduct(scalar));
-                } catch (ComplexException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return nmatrix;
-    }
 
     /**
      * This method Checks if the given coordinates are out of Bounds
