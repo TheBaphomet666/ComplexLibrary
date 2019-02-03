@@ -83,10 +83,10 @@ public class ComplexMatrix  {
     }
 
     /**
-     * This method Returns The Attached of a Matrix
+     * This method Returns The adjoint of a Matrix
      * @return A Complex Matrix
      */
-    public ComplexMatrix attach(){
+    public ComplexMatrix adjoint(){
         return this.conjugation().transpose();
     }
 
@@ -112,6 +112,26 @@ public class ComplexMatrix  {
     }
 
     /**
+     * This method Multiplies the matrix by an scalar.
+     * @param scalar int Scalar about to be applied to the matrix.
+     * @return A complex Matrix resulted by the scalar product.
+     */
+    public ComplexMatrix scalarProduct(int scalar){
+
+        ComplexMatrix nmatrix= new ComplexMatrix(m,n);
+        for(int i=0;i<m;i++){
+            for(int j=0;i<n;j++){
+                try {
+                    nmatrix.put(i,j,matrix[i][j].scalarProduct(scalar));
+                } catch (ComplexException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return nmatrix;
+    }
+
+    /**
      * This method Checks if the given coordinates are out of Bounds
      * @param i int row.
      * @param j int collumn.
@@ -129,5 +149,23 @@ public class ComplexMatrix  {
 
     public int getM() {
         return m;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ComplexMatrix)) return false;
+        ComplexMatrix that = (ComplexMatrix) o;
+        return m == that.m &&
+                n == that.n &&
+                Arrays.equals(matrix, that.matrix);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(m, n);
+        result = 31 * result + Arrays.hashCode(matrix);
+        return result;
     }
 }

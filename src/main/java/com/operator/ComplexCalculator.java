@@ -90,6 +90,8 @@ public class ComplexCalculator {
         return nmatrix;
     }
 
+
+
     private static void checkMatricesSameDimention(ComplexMatrix a, ComplexMatrix b) throws  ComplexException{
         if(a.getN() != b.getN() || a.getM()!= b.getM()){
             throw new ComplexException(ComplexException.NOT_MATCHING_MATRICES);
