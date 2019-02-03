@@ -90,6 +90,11 @@ public class ComplexMatrix  {
         return this.conjugation().transpose();
     }
 
+
+    /**
+     * This Method returns the Inverse of the Matrix
+     * @return a Complex Matrix that every index is inversed.
+     */
     public ComplexMatrix inverse(){
         ComplexMatrix nmatrix= new ComplexMatrix(m,n);
 
@@ -116,5 +121,13 @@ public class ComplexMatrix  {
         if(i<0 || j<0 || i>=m || j>=n){
             throw new ComplexException(ComplexException.OUT_OF_BOUNDS);
         }
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public int getM() {
+        return m;
     }
 }

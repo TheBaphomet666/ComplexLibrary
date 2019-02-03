@@ -1,6 +1,8 @@
 package com.operator;
 
 
+import com.Exceptions.ComplexException;
+import com.model.ComplexMatrix;
 import com.model.ComplexNumber;
 
 public class ComplexCalculator {
@@ -48,5 +50,50 @@ public class ComplexCalculator {
         return  new ComplexNumber(x,y);
     }
 
+    /**
+     * This Method Sums Two ComplexMatrices
+     * @param a First Matrix
+     * @param b Second Matrix
+     * @return Returns a ComplexMatrix That is the result of a+b
+     * @throws ComplexException Throws Exception if dimention of the Two Matrices doesn't match.
+     */
+    public static ComplexMatrix sum(ComplexMatrix a, ComplexMatrix b) throws ComplexException {
+        checkMatricesSameDimention(a,b);
+        ComplexMatrix nmatrix = new ComplexMatrix(a.getM(),a.getN());
+        for(int i=0; i<a.getM();i++){
+            for(int j=0;j<a.getN();j++){
+                nmatrix.put(i,j,sum(a.get(i,j),b.get(i,j)));
+            }
+
+        }
+
+        return nmatrix;
+    }
+
+    /**
+     * This Method Sums Two ComplexMatrices
+     * @param a First Matrix
+     * @param b Second Matrix
+     * @return Returns a ComplexMatrix That is the result of a-b
+     * @throws ComplexException Throws Exception if dimention of the Two Matrices doesn't match.
+     */
+    public static ComplexMatrix substract(ComplexMatrix a, ComplexMatrix b) throws ComplexException {
+        checkMatricesSameDimention(a,b);
+        ComplexMatrix nmatrix = new ComplexMatrix(a.getM(),a.getN());
+        for(int i=0; i<a.getM();i++){
+            for(int j=0;j<a.getN();j++){
+                nmatrix.put(i,j,substract(a.get(i,j),b.get(i,j)));
+            }
+
+        }
+
+        return nmatrix;
+    }
+
+    private static void checkMatricesSameDimention(ComplexMatrix a, ComplexMatrix b) throws  ComplexException{
+        if(a.getN() != b.getN() || a.getM()!= b.getM()){
+            throw new ComplexException(ComplexException.NOT_MATCHING_MATRICES);
+        }
+    }
 
 }
