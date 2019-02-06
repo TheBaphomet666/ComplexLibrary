@@ -43,14 +43,16 @@ public class complexTest {
 
     @Test
     public void shouldShowAsCartesian(){
-        System.out.println(new ComplexNumber(1,1).toStringAsCartesian());
-        Assert.assertTrue(true);
+       // System.out.println(new ComplexNumber(1,1).toStringAsCartesian());
+        String result ="(1.0,1.0)";
+        Assert.assertEquals(new ComplexNumber(1,1).toStringAsCartesian(),result);
     }
 
     @Test
     public void shouldShowAsPolar(){
-        System.out.println(new ComplexNumber(1,1).toStringAspolar());
-        Assert.assertTrue(true);
+        //System.out.println(new ComplexNumber(1,1).toStringAspolar());
+        String result ="(1.4142135623730951,0.7853981633974483)";
+        Assert.assertEquals(new ComplexNumber(1,1).toStringAspolar(),result);
     }
 
     @Test
@@ -67,10 +69,23 @@ public class complexTest {
         } catch (ComplexException e) {
             e.printStackTrace();
         }
+        ComplexMatrix result= new ComplexMatrix(2,4);
+        try {
+            for(int i=0;i<2;i++){
+                for(int j=0;j<4;j++){
+                    result.put(i,j,new ComplexNumber(a.get(j,i).getRealPart(),a.get(j,i).getImaginaryPart()));
+                }
 
+            }
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
         ComplexMatrix b= a.transpose();
-        System.out.println(b);
-        System.out.println(a);
+        //System.out.println(result);
+        //System.out.println(b);
+        Assert.assertTrue(a.transpose().equals(result));
+
 
     }
 

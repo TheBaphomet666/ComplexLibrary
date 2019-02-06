@@ -121,6 +121,7 @@ public class ComplexMatrix  {
      */
     private void checkBounds(int i,int j) throws ComplexException{
         if(i<0 || j<0 || i>=m || j>=n){
+            System.out.println("i="+i+" j="+j);
             throw new ComplexException(ComplexException.OUT_OF_BOUNDS);
         }
     }

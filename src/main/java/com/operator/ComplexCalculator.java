@@ -123,6 +123,13 @@ public class ComplexCalculator {
         return nmatrix;
     }
 
+    /**
+     * This method multiplies two matrices
+     * @param a First Matrix
+     * @param b Second Matrix
+     * @return A ComplexMatrix result of AXB
+     * @throws ComplexException throws exception if the Dimention of the matrices doesn't match for the multiplication.
+     */
     public static ComplexMatrix multiply(ComplexMatrix a, ComplexMatrix b) throws ComplexException{
         if(a.getN()!=b.getM()){
             throw new ComplexException(ComplexException.NOT_MATCHING_MULTIPLICATION);
@@ -143,7 +150,12 @@ public class ComplexCalculator {
     }
 
 
-
+    /**
+     * Checks if two matrices have the same dimention
+     * @param a First ComplexMatrix
+     * @param b Second ComplexMatrix
+     * @throws ComplexException Throws exception if the matrices doesn't have the same dimention.
+     */
     private static void checkMatricesSameDimention(ComplexMatrix a, ComplexMatrix b) throws  ComplexException{
         if(a.getN() != b.getN() || a.getM()!= b.getM()){
             throw new ComplexException(ComplexException.NOT_MATCHING_MATRICES);
