@@ -147,33 +147,58 @@ public class complexTest {
             e.printStackTrace();
         }
     }
+    @Test
+    public void shouldTensor(){
+        ComplexMatrix a= new ComplexMatrix(2,2);
+        ComplexMatrix b= new ComplexMatrix(3,2);
+        try {
+            for(int i=0;i<2;i++){
+                for(int j=0;j<2;j++){
+                    a.put(i,j,new ComplexNumber(0,1));
+                }
+
+            }
+            for(int i=0;i<3;i++){
+                for(int j=0;j<2;j++){
+                    b.put(i,j,new ComplexNumber(0,1));
+                }
+
+            }
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        System.out.println(ComplexCalculator.tensor(a,b));
+    }
 
     @Test
-    public void shouldSubMatrices(){
+    public void shouldSubMatrices() {
 
-        ComplexMatrix a= new ComplexMatrix(2,2);
+        ComplexMatrix a = new ComplexMatrix(2, 2);
 
-        ComplexMatrix result = new ComplexMatrix(2,2);
+        ComplexMatrix result = new ComplexMatrix(2, 2);
 
         try {
-            a.put(0,0,new ComplexNumber(1,4));
-            a.put(0,1,new ComplexNumber(2,3));
-            a.put(1,0,new ComplexNumber(3,2));
-            a.put(1,1,new ComplexNumber(4,1));
-            result.put(0,0, new ComplexNumber(0,0));
-            result.put(0,1, new ComplexNumber(0,0));
-            result.put(1,0, new ComplexNumber(0,0));
-            result.put(1,1, new ComplexNumber(0,0));
+            a.put(0, 0, new ComplexNumber(1, 4));
+            a.put(0, 1, new ComplexNumber(2, 3));
+            a.put(1, 0, new ComplexNumber(3, 2));
+            a.put(1, 1, new ComplexNumber(4, 1));
+            result.put(0, 0, new ComplexNumber(0, 0));
+            result.put(0, 1, new ComplexNumber(0, 0));
+            result.put(1, 0, new ComplexNumber(0, 0));
+            result.put(1, 1, new ComplexNumber(0, 0));
 
         } catch (ComplexException e) {
             e.printStackTrace();
         }
 
         try {
-            Assert.assertEquals(ComplexCalculator.substract(a,a),result);
+            Assert.assertEquals(ComplexCalculator.substract(a, a), result);
         } catch (ComplexException e) {
             e.printStackTrace();
         }
     }
+
+
 
 }

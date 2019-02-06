@@ -2,6 +2,7 @@ package com.model;
 
 import com.Exceptions.ComplexException;
 
+import javax.sound.midi.SysexMessage;
 import java.util.*;
 
 
@@ -175,6 +176,7 @@ public class ComplexMatrix  {
         String ma="";
         for (int i=0;i<m;i++){
             for(int j=0;j<n;j++){
+               // System.out.println("i= "+i+"j= "+j);
                 ma+="["+matrix[i][j].toStringAsCartesian()+"],";
             }
             ma+="\n";
