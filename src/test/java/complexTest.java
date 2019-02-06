@@ -120,4 +120,60 @@ public class complexTest {
 
     }
 
+    @Test
+    public void shouldSumMatrices(){
+
+        ComplexMatrix a= new ComplexMatrix(2,2);
+
+        ComplexMatrix result = new ComplexMatrix(2,2);
+
+        try {
+            a.put(0,0,new ComplexNumber(1,4));
+            a.put(0,1,new ComplexNumber(2,3));
+            a.put(1,0,new ComplexNumber(3,2));
+            a.put(1,1,new ComplexNumber(4,1));
+            result.put(0,0, new ComplexNumber(a.get(0,0).getRealPart()*2,a.get(0,0).getImaginaryPart()*2));
+            result.put(0,1, new ComplexNumber(a.get(0,1).getRealPart()*2,a.get(0,1).getImaginaryPart()*2));
+            result.put(1,0, new ComplexNumber(a.get(1,0).getRealPart()*2,a.get(1,0).getImaginaryPart()*2));
+            result.put(1,1, new ComplexNumber(a.get(1,1).getRealPart()*2,a.get(1,1).getImaginaryPart()*2));
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Assert.assertEquals(ComplexCalculator.sum(a,a),result);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void shouldSubMatrices(){
+
+        ComplexMatrix a= new ComplexMatrix(2,2);
+
+        ComplexMatrix result = new ComplexMatrix(2,2);
+
+        try {
+            a.put(0,0,new ComplexNumber(1,4));
+            a.put(0,1,new ComplexNumber(2,3));
+            a.put(1,0,new ComplexNumber(3,2));
+            a.put(1,1,new ComplexNumber(4,1));
+            result.put(0,0, new ComplexNumber(0,0));
+            result.put(0,1, new ComplexNumber(0,0));
+            result.put(1,0, new ComplexNumber(0,0));
+            result.put(1,1, new ComplexNumber(0,0));
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Assert.assertEquals(ComplexCalculator.substract(a,a),result);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
