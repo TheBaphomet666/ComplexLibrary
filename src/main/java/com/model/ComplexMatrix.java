@@ -1,6 +1,7 @@
 package com.model;
 
 import com.Exceptions.ComplexException;
+import com.operator.ComplexCalculator;
 
 import javax.sound.midi.SysexMessage;
 import java.util.*;
@@ -71,7 +72,7 @@ public class ComplexMatrix  {
         ComplexMatrix nmatrix= new ComplexMatrix(m,n);
 
         for(int i=0;i<m;i++){
-            for(int j=0;i<n;j++){
+            for(int j=0;j<n;j++){
                 try {
                     nmatrix.put(i,j,matrix[i][j].conjugation());
                 } catch (ComplexException e) {
@@ -126,6 +127,60 @@ public class ComplexMatrix  {
             System.out.println("i="+i+" j="+j);
             throw new ComplexException(ComplexException.OUT_OF_BOUNDS);
         }
+    }
+
+    /**
+     * This method is used to know if the matrix is hermitian
+     * @return a boolean true if is hermitian false if not.
+     */
+    public boolean isHermitian(){
+        boolean bol =false;
+        if(this.equals(this.adjoint())){
+            bol=true;
+        }
+        return bol;
+    }
+
+    /**
+     * This method is used to know if a given matrix is unitary
+     * @return True if is unitary false if not.
+     * @throws ComplexException Throws exception if the given matrix is not square.
+     */
+    public boolean isUnitary() throws ComplexException {
+        if(this.n!=this.m){
+            throw new ComplexException(ComplexException.NOT_SQUARE);
+        }
+        boolean bol=true;
+
+        if(!ComplexCalculator.multiply(this,this.adjoint()).equals(ComplexCalculator.multiply(this.adjoint(),this))){
+            bol=false;
+            //System.out.println("false1");
+
+        }
+        ComplexMatrix nthis= ComplexCalculator.multiply(this,this.adjoint());
+        //System.out.println(nthis.getN()+" "+nthis.getM() );
+        if(bol){
+            for(int i=0;i<m && bol;i++){
+                for(int j=0;j<n && bol;j++){
+                    if(i!=j){
+                        if(!nthis.get(i,j).equals(new ComplexNumber(0,0))){
+                            bol=false;
+                            //System.out.println("false2");
+                        }
+                    }
+                    else if(i==j){
+                        if(!nthis.get(i,j).equals(new ComplexNumber(1,0))){
+                            bol=false;
+                            //System.out.println("false3");
+                            System.out.println(nthis.get(i,j));
+                        }
+                    }
+                }
+
+            }
+
+        }
+        return bol;
     }
 
     public int getN() {

@@ -96,7 +96,7 @@ public class ComplexCalculator {
      * @param c The complexNumber
      * @return A new ComplexNumber Result of the Scalar product.
      */
-    public static ComplexNumber scalarProduct(int scalar, ComplexNumber c){
+    public static ComplexNumber scalarProduct(double scalar, ComplexNumber c){
 
         return new ComplexNumber(c.getRealPart()*scalar,c.getImaginaryPart()*scalar);
 
@@ -108,11 +108,11 @@ public class ComplexCalculator {
      * @param  c The ComplexMatrix
      * @return A complex Matrix resulted by the scalar product.
      */
-    public static ComplexMatrix scalarProduct(int scalar, ComplexMatrix c){
+    public static ComplexMatrix scalarProduct(double scalar, ComplexMatrix c){
 
         ComplexMatrix nmatrix= new ComplexMatrix(c.getM(),c.getN());
         for(int i=0;i<c.getM();i++){
-            for(int j=0;i<c.getN();j++){
+            for(int j=0;j<c.getN();j++){
                 try {
                     nmatrix.put(i,j,scalarProduct(scalar,c.get(i,j)));
                 } catch (ComplexException e) {

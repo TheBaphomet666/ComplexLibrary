@@ -209,6 +209,24 @@ public class complexTest {
         }
     }
 
+    @Test
+    public void shouldCheckUnitary(){
+        ComplexMatrix a = new ComplexMatrix(2,2);
+
+        try {
+            a.put(0,0,new ComplexNumber(1,1));
+            a.put(0,1,new ComplexNumber(1,-1));
+            a.put(1,0,new ComplexNumber(1,-1));
+            a.put(1,1,new ComplexNumber(1,1));
+            a= ComplexCalculator.scalarProduct(0.5,a);
+            Assert.assertTrue(a.isUnitary());
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 }
