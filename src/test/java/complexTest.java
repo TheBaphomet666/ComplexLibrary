@@ -227,6 +227,40 @@ public class complexTest {
 
     }
 
+    @Test
+    public void shouldNorm(){
+        ComplexMatrix a= new ComplexMatrix(1,4);
+        try {
+            a.put(0,0,new ComplexNumber(3,2));
+            a.put(0,1,new ComplexNumber(-1,3));
+            a.put(0,2,new ComplexNumber(-10,-7));
+            a.put(0,3,new ComplexNumber(9,-8));
+            Assert.assertEquals(a.norm(),Math.sqrt(317),0);
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Test
+    public void shouldDistance(){
+        ComplexMatrix a= new ComplexMatrix(1,2);
+        ComplexMatrix b= new ComplexMatrix(1,2);
+
+        try {
+            a.put(0,0,new ComplexNumber(1,2));
+            a.put(0,1,new ComplexNumber(1,2));
+            b.put(0,0,new ComplexNumber(6,3));
+            b.put(0,1,new ComplexNumber(5,1));
+            Assert.assertEquals(6.557438524302,ComplexCalculator.substract(a,b).norm(),0);
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 }

@@ -151,14 +151,10 @@ public class ComplexMatrix  {
             throw new ComplexException(ComplexException.NOT_SQUARE);
         }
         boolean bol=true;
-
         if(!ComplexCalculator.multiply(this,this.adjoint()).equals(ComplexCalculator.multiply(this.adjoint(),this))){
             bol=false;
-            //System.out.println("false1");
-
         }
         ComplexMatrix nthis= ComplexCalculator.multiply(this,this.adjoint());
-        //System.out.println(nthis.getN()+" "+nthis.getM() );
         if(bol){
             for(int i=0;i<m && bol;i++){
                 for(int j=0;j<n && bol;j++){
@@ -181,6 +177,28 @@ public class ComplexMatrix  {
 
         }
         return bol;
+    }
+
+    /**
+     * This method returns the norm of a vector.
+     * @return A double that is the norm of a vector
+     * @throws ComplexException Throws exception if is not a vector.
+     */
+    public double norm() throws ComplexException {
+        isVector(this);
+        double result=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++) {
+                result+=Math.pow(this.get(i,j).modulus(),2);
+            }
+        }
+        return Math.sqrt(result);
+
+    }
+    private void isVector(ComplexMatrix v) throws ComplexException {
+        if(!(v.getM()==1 && v.getN()>1 || v.getN()==1 && v.getM()>1)){
+            throw  new ComplexException(ComplexException.NOT_A_VECTOR);
+        }
     }
 
     public int getN() {

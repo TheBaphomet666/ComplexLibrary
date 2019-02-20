@@ -149,10 +149,14 @@ public class ComplexCalculator {
         return nmatrix;
     }
 
+    /**
+     * This method is the Tensor product beetwen two matrices
+     * @param a first matrix
+     * @param b second matrix
+     * @return Returns the result of a tensor b
+     */
     public static ComplexMatrix tensor(ComplexMatrix a, ComplexMatrix b){
-
         ComplexMatrix res = new ComplexMatrix(a.getM()*b.getM(),a.getN()*b.getN());
-        //System.out.println("m= "+res.getM()+"n= "+res.getN());
         for(int i=0;i<a.getM();i++){
             for(int j=0;j<a.getN();j++){
                 //Recorriendo A
@@ -177,6 +181,20 @@ public class ComplexCalculator {
 
     }
 
+    /**
+     * This method Calculates the distance between two vectors
+     * @param a First vector.
+     * @param b Second Vector.
+     * @return A double that is the distance.
+     * @throws ComplexException If any of the given are not vectors.
+     */
+    public static double distance(ComplexMatrix a, ComplexMatrix b) throws ComplexException {
+        if(!(isVector(a) && isVector(b))){
+            throw new ComplexException(ComplexException.NOT_A_VECTOR);
+        }
+        return ComplexCalculator.substract(a,b).norm();
+    }
+
 
     /**
      * Checks if two matrices have the same dimention
@@ -188,6 +206,13 @@ public class ComplexCalculator {
         if(a.getN() != b.getN() || a.getM()!= b.getM()){
             throw new ComplexException(ComplexException.NOT_MATCHING_MATRICES);
         }
+    }
+
+    private static boolean isVector(ComplexMatrix v){
+        if(!(v.getM()==1 && v.getN()>1 || v.getN()==1 && v.getM()>1)){
+            return false;
+        }
+        return true;
     }
 
 }
