@@ -152,7 +152,7 @@ public class ComplexCalculator {
     public static ComplexMatrix tensor(ComplexMatrix a, ComplexMatrix b){
 
         ComplexMatrix res = new ComplexMatrix(a.getM()*b.getM(),a.getN()*b.getN());
-        System.out.println("m= "+res.getM()+"n= "+res.getN());
+        //System.out.println("m= "+res.getM()+"n= "+res.getN());
         for(int i=0;i<a.getM();i++){
             for(int j=0;j<a.getN();j++){
                 //Recorriendo A
@@ -160,7 +160,7 @@ public class ComplexCalculator {
                     for(int l=0;l<b.getN();l++){
                         //tengo indice b
                         try {
-                            System.out.println("I= "+(i*b.getM()+k)+"J= "+(j*b.getN()+l));
+                            //System.out.println("I= "+(i*b.getM()+k)+"J= "+(j*b.getN()+l));
                             res.put((i*b.getM()+k),(j*b.getN()+l),ComplexCalculator.multiply(a.get(i,j),b.get(k,l)));
                         } catch (ComplexException e) {
                             e.printStackTrace();

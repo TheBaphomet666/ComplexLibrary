@@ -151,6 +151,7 @@ public class complexTest {
     public void shouldTensor(){
         ComplexMatrix a= new ComplexMatrix(2,2);
         ComplexMatrix b= new ComplexMatrix(3,2);
+        ComplexMatrix result= new ComplexMatrix(6,4);
         try {
             for(int i=0;i<2;i++){
                 for(int j=0;j<2;j++){
@@ -164,11 +165,20 @@ public class complexTest {
                 }
 
             }
+            for(int i=0;i<6;i++){
+                for(int j=0;j<4;j++){
+                    result.put(i,j,new ComplexNumber(-1,0));
+                }
+
+            }
+
 
         } catch (ComplexException e) {
             e.printStackTrace();
         }
-        System.out.println(ComplexCalculator.tensor(a,b));
+        //System.out.println(result);
+        //System.out.println(ComplexCalculator.tensor(a,b));
+        Assert.assertEquals(ComplexCalculator.tensor(a,b),result);
     }
 
     @Test
