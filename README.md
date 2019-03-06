@@ -1,10 +1,10 @@
 # ComplexLibrary
 
-##This library is a calculator for Complex Numbers and their additions as vectors and matrices
+## This library is a calculator for Complex Numbers and their additions as vectors and matrices
 
-#Allowed operations:
+# Allowed operations:
 
-##Complex Numbers
+## Complex Numbers
 
 - Addition
 - Substraction
@@ -17,7 +17,7 @@
 - Scalar Product
 - Showing as polar and as cartesian representation
 
-##Complex Matrices
+## Complex Matrices
 
 - Addition
 - Substraction
@@ -28,8 +28,8 @@
 - Tensor Product
 - Scalar Product
 
-#WORKING ON MORE
+# WORKING ON MORE
 
 
-##Authors
+## Authors
 - [Oscar Pinto](https://github.com/TheBaphomet666)
