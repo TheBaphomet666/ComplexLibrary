@@ -1,3 +1,5 @@
+package tests;
+
 import com.Exceptions.ComplexException;
 import com.model.ComplexMatrix;
 import com.model.ComplexNumber;
@@ -56,7 +58,7 @@ public class complexTest {
     }
 
     @Test
-    public void ShouldTransponseMatrices(){
+    public void shouldTransponseMatrices(){
         ComplexMatrix a= new ComplexMatrix(4,2);
         try {
             for(int i=0;i<4;i++){

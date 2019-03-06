@@ -219,11 +219,11 @@ public class ComplexCalculator {
      * This Method changes the state of the Marbles.
      * @param bool
      * @param marble
-     * @param clicks
+     * @param tick
      * @return
      * @throws ComplexException
      */
-    public static ComplexMatrix Marble(ComplexMatrix bool,ComplexMatrix marble,int clicks)throws ComplexException{
+    public static ComplexMatrix Marble(ComplexMatrix bool,ComplexMatrix marble,int tick)throws ComplexException{
         for(int i=0;i<bool.getM();i++){
             for(int j=0;j<bool.getN();j++) {
                     if(!(bool.get(i,j).equals(new ComplexNumber(1,0)) || bool.get(i,j).equals(new ComplexNumber(0,0) ))){
@@ -234,17 +234,17 @@ public class ComplexCalculator {
         if(!isVector(marble) || marble.getN()!=1){
             throw new ComplexException(ComplexException.NOT_MATCHING_VECTOR);
         }
-        if(clicks<=0){
+        if(tick<=0){
             throw new ComplexException(ComplexException.INVALID_ARGUMENT);
         }
         ComplexMatrix current= bool;
-        if(clicks>1) {
+        if(tick>1) {
             current = ComplexCalculator.multiply(bool, bool);
-            clicks--;
+            tick--;
 
-            while (clicks > 1) {
+            while (tick > 1) {
                 current = ComplexCalculator.multiply(current, bool);
-                clicks--;
+                tick--;
             }
         }
         ComplexMatrix result = ComplexCalculator.multiply(current,marble);
@@ -255,26 +255,26 @@ public class ComplexCalculator {
      * This Method simulates the Slits.
      * @param bool
      * @param marble
-     * @param clicks
+     * @param tick
      * @return
      * @throws ComplexException
      */
-    public static ComplexMatrix Slit(ComplexMatrix bool,ComplexMatrix marble,int clicks)throws ComplexException{
+    public static ComplexMatrix Slit(ComplexMatrix bool,ComplexMatrix marble,int tick)throws ComplexException{
 
         if(!isVector(marble) || marble.getN()!=1){
             throw new ComplexException(ComplexException.NOT_MATCHING_VECTOR);
         }
-        if(clicks<=0){
+        if(tick<=0){
             throw new ComplexException(ComplexException.INVALID_ARGUMENT);
         }
         ComplexMatrix current= bool;
-        if(clicks>1) {
+        if(tick>1) {
             current = ComplexCalculator.multiply(bool, bool);
-            clicks--;
+            tick--;
 
-            while (clicks > 1) {
+            while (tick > 1) {
                 current = ComplexCalculator.multiply(current, bool);
-                clicks--;
+                tick--;
             }
         }
         ComplexMatrix result = ComplexCalculator.multiply(current,marble);
