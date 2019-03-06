@@ -311,6 +311,86 @@ public class complexTest {
         } catch (ComplexException e) {
             e.printStackTrace();
         }*/
+    }
+
+    @Test
+    public void multipleSlits(){
+        ComplexMatrix a= new ComplexMatrix(11,11);
+        ComplexMatrix b= new ComplexMatrix(11,1);
+        ComplexMatrix result= new ComplexMatrix(11,1);
+        for(int i=0; i< a.getM();i++){
+            for(int j=0; j<a.getN();j++){
+                try {
+                    a.put(i,j,new ComplexNumber(0,0));
+                } catch (ComplexException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        try {
+            a.put(1,0,new ComplexNumber((double)1/3,0));
+            a.put(2,0,new ComplexNumber((double)1/3,0));
+            a.put(3,0,new ComplexNumber((double)1/3,0));
+            a.put(4,1,new ComplexNumber((double)1/3,0));
+            a.put(5,1,new ComplexNumber((double)1/3,0));
+            a.put(6,1,new ComplexNumber((double)1/3,0));
+            a.put(6,2,new ComplexNumber((double)1/3,0));
+            a.put(7,2,new ComplexNumber((double)1/3,0));
+            a.put(8,2,new ComplexNumber((double)1/3,0));
+            a.put(8,3,new ComplexNumber((double)1/3,0));
+            a.put(9,3,new ComplexNumber((double)1/3,0));
+            a.put(10,3,new ComplexNumber((double)1/3,0));
+            a.put(4,4,new ComplexNumber(1,0));
+            a.put(5,5,new ComplexNumber(1,0));
+            a.put(6,6,new ComplexNumber(1,0));
+            a.put(7,7,new ComplexNumber(1,0));
+            a.put(8,8,new ComplexNumber(1,0));
+            a.put(9,9,new ComplexNumber(1,0));
+            a.put(10,10,new ComplexNumber(1,0));
+
+            b.put(0,0, new ComplexNumber(1,0));
+            b.put(1,0, new ComplexNumber(0,0));
+            b.put(2,0, new ComplexNumber(0,0));
+            b.put(3,0, new ComplexNumber(0,0));
+            b.put(4,0, new ComplexNumber(0,0));
+            b.put(5,0, new ComplexNumber(0,0));
+            b.put(6,0, new ComplexNumber(0,0));
+            b.put(7,0, new ComplexNumber(0,0));
+            b.put(8,0, new ComplexNumber(0,0));
+            b.put(9,0, new ComplexNumber(0,0));
+            b.put(10,0, new ComplexNumber(0,0));
+
+            result.put(0,0, new ComplexNumber(0,0));
+            result.put(1,0, new ComplexNumber(0,0));
+            result.put(2,0, new ComplexNumber(0,0));
+            result.put(3,0, new ComplexNumber(0,0));
+            result.put(4,0, new ComplexNumber(0.1111111111111111,0));
+            result.put(5,0, new ComplexNumber(0.1111111111111111,0));
+            result.put(6,0, new ComplexNumber(0.2222222222222222,0));
+            result.put(7,0, new ComplexNumber(0.1111111111111111,0));
+            result.put(8,0, new ComplexNumber(0.2222222222222222,0));
+            result.put(9,0, new ComplexNumber(0.1111111111111111,0));
+            result.put(10,0, new ComplexNumber(0.1111111111111111,0));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        /*System.out.println(a);
+        System.out.println(b);
+        try {
+            System.out.println(ComplexCalculator.Slit(ComplexCalculator.multiply(a,a),b,2));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }*/
+        try {
+            Assert.assertEquals(ComplexCalculator.Slit(ComplexCalculator.multiply(a,a),b,2),result);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void doubleSlitQuantum(){
 
     }
 

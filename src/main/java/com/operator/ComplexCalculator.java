@@ -251,4 +251,34 @@ public class ComplexCalculator {
         return result;
     }
 
+    /**
+     * This Method simulates the Slits.
+     * @param bool
+     * @param marble
+     * @param clicks
+     * @return
+     * @throws ComplexException
+     */
+    public static ComplexMatrix Slit(ComplexMatrix bool,ComplexMatrix marble,int clicks)throws ComplexException{
+
+        if(!isVector(marble) || marble.getN()!=1){
+            throw new ComplexException(ComplexException.NOT_MATCHING_VECTOR);
+        }
+        if(clicks<=0){
+            throw new ComplexException(ComplexException.INVALID_ARGUMENT);
+        }
+        ComplexMatrix current= bool;
+        if(clicks>1) {
+            current = ComplexCalculator.multiply(bool, bool);
+            clicks--;
+
+            while (clicks > 1) {
+                current = ComplexCalculator.multiply(current, bool);
+                clicks--;
+            }
+        }
+        ComplexMatrix result = ComplexCalculator.multiply(current,marble);
+        return result;
+    }
+
 }
