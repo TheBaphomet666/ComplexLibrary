@@ -215,4 +215,40 @@ public class ComplexCalculator {
         return true;
     }
 
+    /**
+     * This Method changes the state of the Marbles.
+     * @param bool
+     * @param marble
+     * @param clicks
+     * @return
+     * @throws ComplexException
+     */
+    public static ComplexMatrix Marble(ComplexMatrix bool,ComplexMatrix marble,int clicks)throws ComplexException{
+        for(int i=0;i<bool.getM();i++){
+            for(int j=0;j<bool.getN();j++) {
+                    if(!(bool.get(i,j).equals(new ComplexNumber(1,0)) || bool.get(i,j).equals(new ComplexNumber(0,0) ))){
+                        throw new ComplexException(ComplexException.NOT_A_BOOLEAN);
+                    }
+                }
+            }
+        if(!isVector(marble) || marble.getN()!=1){
+            throw new ComplexException(ComplexException.NOT_MATCHING_VECTOR);
+        }
+        if(clicks<=0){
+            throw new ComplexException(ComplexException.INVALID_ARGUMENT);
+        }
+        ComplexMatrix current= bool;
+        if(clicks>1) {
+            current = ComplexCalculator.multiply(bool, bool);
+            clicks--;
+
+            while (clicks > 1) {
+                current = ComplexCalculator.multiply(current, bool);
+                clicks--;
+            }
+        }
+        ComplexMatrix result = ComplexCalculator.multiply(current,marble);
+        return result;
+    }
+
 }

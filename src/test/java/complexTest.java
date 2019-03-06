@@ -261,6 +261,59 @@ public class complexTest {
         }
     }
 
+    @Test
+    public void Marble(){
+        ComplexMatrix a= new ComplexMatrix(6,6);
+        ComplexMatrix b= new ComplexMatrix(6,1);
+        ComplexMatrix result= new ComplexMatrix(6,1);
+        for(int i=0; i< a.getM();i++){
+            for(int j=0; j<a.getN();j++){
+                try {
+                    a.put(i,j,new ComplexNumber(0,0));
+                } catch (ComplexException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        try {
+            a.put(2,1,new ComplexNumber(1,0));
+            a.put(2,5,new ComplexNumber(1,0));
+            a.put(3,3,new ComplexNumber(1,0));
+            a.put(4,2,new ComplexNumber(1,0));
+            a.put(5,0,new ComplexNumber(1,0));
+            a.put(5,4,new ComplexNumber(1,0));
+
+            b.put(0,0, new ComplexNumber(6,0));
+            b.put(1,0, new ComplexNumber(2,0));
+            b.put(2,0, new ComplexNumber(1,0));
+            b.put(3,0, new ComplexNumber(5,0));
+            b.put(4,0, new ComplexNumber(3,0));
+            b.put(5,0, new ComplexNumber(10,0));
+
+            result.put(0,0, new ComplexNumber(0,0));
+            result.put(1,0, new ComplexNumber(0,0));
+            result.put(2,0, new ComplexNumber(12,0));
+            result.put(3,0, new ComplexNumber(5,0));
+            result.put(4,0, new ComplexNumber(1,0));
+            result.put(5,0, new ComplexNumber(9,0));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        try {
+            Assert.assertEquals(ComplexCalculator.Marble(a,b,1),result);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        //System.out.println(a);
+       // System.out.println(b);
+        /*try {
+            System.out.println(ComplexCalculator.Marble(a,b,1));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }*/
+
+    }
+
 
 
 }
