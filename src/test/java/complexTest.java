@@ -391,6 +391,54 @@ public class complexTest {
 
     @Test
     public void doubleSlitQuantum(){
+        ComplexMatrix a= new ComplexMatrix(11,11);
+        for(int i=0; i< a.getM();i++){
+            for(int j=0; j<a.getN();j++){
+                try {
+                    a.put(i,j,new ComplexNumber(0,0));
+                } catch (ComplexException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        try {
+            a.put(1,0,new ComplexNumber(1/Math.sqrt(2),0));
+            a.put(2,0,new ComplexNumber(1/Math.sqrt(2),0));
+            a.put(3,1,new ComplexNumber(-1/Math.sqrt(6),1/Math.sqrt(6)));
+            a.put(4,1,new ComplexNumber(-1/Math.sqrt(6),-1/Math.sqrt(6)));
+            a.put(5,1,new ComplexNumber(1/Math.sqrt(6),-1/Math.sqrt(6)));
+            a.put(5,2,new ComplexNumber(-1/Math.sqrt(6),1/Math.sqrt(6)));
+            a.put(6,2,new ComplexNumber(-1/Math.sqrt(6),-1/Math.sqrt(6)));
+
+            a.put(3,3,new ComplexNumber(1,0));
+            a.put(4,4,new ComplexNumber(1,0));
+            a.put(5,5,new ComplexNumber(1,0));
+            a.put(6,6,new ComplexNumber(1,0));
+            a.put(7,7,new ComplexNumber(1,0));
+            a.put(8,8,new ComplexNumber(1,0));
+
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        //System.out.println(a);
+        try {
+            a = ComplexCalculator.multiply(a,a);
+            for(int i=0; i< a.getM();i++){
+                for(int j=0; j<a.getN();j++){
+                    try {
+                        a.put(i,j,new ComplexNumber(a.get(i,j).modulus(),0));
+                    } catch (ComplexException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            Assert.assertEquals(a.get(5,0),new ComplexNumber(0,0));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 
