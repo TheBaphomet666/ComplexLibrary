@@ -40,13 +40,6 @@
 3. Apuntamos el laser a la hoja anterior y esta nos resultara con el siguiente patron (OJO! la idea para visualizar esto es estando en un cuarto con poca luz):
 ![resultado](https://github.com/Martin9958/CalculadoraDeComplejos/blob/master/imagenes/resultado.jpeg)
 
-#### Demostracion Teorica:
-Este sistema es un sistema probabilistico donde por cada rendija la probabilidad seria de 1/numero de rendijas utilizadas, en este caso el numero de rendijas seria de dos, este sistema demuestra la naturaleza ondulatoria de la luz.
-Para ver una demostracion probabilistica, ejecuta la prueba encontrada en SimulacionDeLoClasicoALoCuanticoTest llamada exoerimentoSeccion3_2_2_version2() la cual demuestra paso a paso lo que ocurre en el sistema.
-
-![resultadoA](https://github.com/Martin9958/CalculadoraDeComplejos/blob/master/imagenes/A.png)
-![resultadoB](https://github.com/Martin9958/CalculadoraDeComplejos/blob/master/imagenes/B.png)
-![resultadoC](https://github.com/Martin9958/CalculadoraDeComplejos/blob/master/imagenes/c.png)
 
 Cuando la luz llega a la doble rendija, cada una de estas rendijas actuará como un foco emisor secundiaro. Por lo tanto se crearán dos ondas que interferirán, veremos como hay regiones con mucha intensidad (interferencia constructiva de la ondas) y otras regiones con poca intensidad (interferencia destructiva de las ondas). Esto es lo que llamamos patrón de interferencia.
 ![patronOndas](https://github.com/Martin9958/CalculadoraDeComplejos/blob/master/imagenes/Double-slit.png)
