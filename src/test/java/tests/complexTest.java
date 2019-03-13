@@ -7,6 +7,8 @@ import com.operator.ComplexCalculator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 
 public class complexTest {
 
@@ -441,6 +443,31 @@ public class complexTest {
         }
 
 
+
+    }
+
+    @Test
+    public void ket(){
+        ComplexMatrix b= new ComplexMatrix(3,1);
+        ArrayList<Double> result = new ArrayList<Double>();
+        result.add(0.2702702702702704);
+        result.add(0.45945945945945954);
+        result.add(0.2702702702702704);
+        boolean succeded= true;
+        try {
+            b.put(0,0, new ComplexNumber(1,3));
+            b.put(1,0, new ComplexNumber(-1,-4));
+            b.put(2,0, new ComplexNumber(3,1));
+            double norm2 = Math.pow(b.norm(),2);
+            for(int i=0;i<b.getM();i++){
+                if(!(result.get(i)==Math.pow(b.get(i,0).modulus(),2)/norm2)){
+                    succeded=false;
+                }
+            }
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(succeded);
 
     }
 
