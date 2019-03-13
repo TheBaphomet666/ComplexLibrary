@@ -292,7 +292,7 @@ public class ComplexCalculator {
         if(!(isVector(a) && isVector(b))){
             throw new ComplexException(ComplexException.NOT_A_VECTOR);
         }
-        return multiply(a.transpose(),b).get(0,0);
+        return multiply(a,b).get(0,0);
     }
 
 }

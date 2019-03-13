@@ -475,7 +475,7 @@ public class complexTest {
     public void transitionalAmplitude(){
         ComplexMatrix b= new ComplexMatrix(3,1);
         ComplexMatrix a= new ComplexMatrix(3,1);
-        ComplexNumber result = new ComplexNumber(11,41);
+        ComplexNumber result = new ComplexNumber(41,-11);
         try {
             a.put(0, 0, new ComplexNumber(1, 1));
             a.put(1, 0, new ComplexNumber(-2, -2));
@@ -485,7 +485,8 @@ public class complexTest {
             b.put(1, 0, new ComplexNumber(-1, -4));
             b.put(2, 0, new ComplexNumber(3, 1));
             ComplexMatrix bra = a.adjoint();
-            ComplexNumber amplitude = ComplexCalculator.innerProduct(a, b);
+            ComplexNumber amplitude = ComplexCalculator.innerProduct(bra, b);
+            //System.out.println(amplitude);
             Assert.assertEquals(amplitude,result);
         }catch (ComplexException e) {
             e.printStackTrace();
