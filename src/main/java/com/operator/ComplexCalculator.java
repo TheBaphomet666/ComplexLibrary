@@ -281,4 +281,18 @@ public class ComplexCalculator {
         return result;
     }
 
+    /**
+     * This method returns the inner product  of two vectors
+     * @param a vector a
+     * @param b vctor b
+     * @return Complex number result of he inner product.
+     * @throws ComplexException
+     */
+    public static ComplexNumber innerProduct(ComplexMatrix a, ComplexMatrix b) throws ComplexException {
+        if(!(isVector(a) && isVector(b))){
+            throw new ComplexException(ComplexException.NOT_A_VECTOR);
+        }
+        return multiply(a.transpose(),b).get(0,0);
+    }
+
 }
