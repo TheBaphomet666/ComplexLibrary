@@ -295,4 +295,57 @@ public class ComplexCalculator {
         return multiply(a,b).get(0,0);
     }
 
+    /**
+     *
+     * @param a Vector a
+     * @param b Vector b
+     * @return Complex Number that is the transition amplitude between both vectors.
+     * @throws ComplexException
+     */
+    public static ComplexNumber TransitionalAmplitude(ComplexMatrix a, ComplexMatrix b) throws ComplexException {
+        ComplexMatrix bra = a.adjoint();
+        ComplexNumber amplitude = innerProduct(bra, b);
+        return amplitude;
+
+    }
+
+    /**
+     *
+     * @param o
+     * @param k
+     * @return
+     * @throws ComplexException
+     */
+    public  static ComplexNumber meanValue(ComplexMatrix o,ComplexMatrix k) throws ComplexException {
+        if(!isVector(k)){
+            throw new ComplexException(ComplexException.NOT_A_VECTOR);
+        }
+        return innerProduct(multiply(o,k).adjoint(),k);
+    }
+
+    /**
+     *
+     * @param o
+     * @param k
+     * @return
+     * @throws ComplexException
+     */
+    public static ComplexNumber variance(ComplexMatrix o, ComplexMatrix k) throws ComplexException {
+
+        ComplexNumber s = meanValue(o,k);
+        ComplexMatrix identity = new ComplexMatrix(o.getM(),o.getN());
+        for(int i =0;i<o.getM();i++){
+            for(int j =0;j<o.getN();j++){
+                if(i==j){
+                    identity.put(i,j,s);
+                }
+                else{
+                    identity.put(i,j,new ComplexNumber(0,0));
+                }
+            }
+        }
+        return innerProduct(multiply(k.adjoint(),multiply(ComplexCalculator.substract(identity,o),ComplexCalculator.substract(identity,o))),k);
+
+    }
+
 }

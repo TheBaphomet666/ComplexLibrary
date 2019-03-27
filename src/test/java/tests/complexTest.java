@@ -484,8 +484,8 @@ public class complexTest {
             b.put(0, 0, new ComplexNumber(12, 3));
             b.put(1, 0, new ComplexNumber(-1, -4));
             b.put(2, 0, new ComplexNumber(3, 1));
-            ComplexMatrix bra = a.adjoint();
-            ComplexNumber amplitude = ComplexCalculator.innerProduct(bra, b);
+
+            ComplexNumber amplitude = ComplexCalculator.TransitionalAmplitude(a,b);
             //System.out.println(amplitude);
             Assert.assertEquals(amplitude,result);
         }catch (ComplexException e) {
@@ -494,6 +494,49 @@ public class complexTest {
 
     }
 
+
+    @Test
+    public void meanValue(){
+        ComplexMatrix o = new ComplexMatrix(2,2);
+        ComplexMatrix k = new ComplexMatrix(2,1);
+        ComplexNumber res = new ComplexNumber(2.5,0);
+        try {
+            o.put(0,0,new ComplexNumber(1,0));
+            o.put(0,1,new ComplexNumber(0,-1));
+            o.put(1,0,new ComplexNumber(0,1));
+            o.put(1,1,new ComplexNumber(2,0));
+
+            k.put(0,0, new ComplexNumber(Math.sqrt(2)/2,0));
+            k.put(1,0, new ComplexNumber(0,Math.sqrt(2)/2));
+
+            Assert.assertEquals(ComplexCalculator.meanValue(o,k).getRealPart(),res.getImaginaryPart(),10);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void variance(){
+        ComplexMatrix o = new ComplexMatrix(2,2);
+        ComplexMatrix k = new ComplexMatrix(2,1);
+        ComplexNumber res = new ComplexNumber(2.5,0);
+        try {
+            o.put(0,0,new ComplexNumber(1,0));
+            o.put(0,1,new ComplexNumber(0,-1));
+            o.put(1,0,new ComplexNumber(0,1));
+            o.put(1,1,new ComplexNumber(2,0));
+
+            k.put(0,0, new ComplexNumber(Math.sqrt(2)/2,0));
+            k.put(1,0, new ComplexNumber(0,Math.sqrt(2)/2));
+
+            Assert.assertEquals(ComplexCalculator.meanValue(o,k).getRealPart(),res.getImaginaryPart(),10);
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
 
