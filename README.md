@@ -29,8 +29,27 @@
 -  Inverse
 -  Tensor Product
 -  Scalar Product
+-  Hermitian
+-  Unitary
+-  Inner Product
+-  Norm
+-  Distance
+-  Tensor Product
+-  Transition Amplitude
+-  MeanValue
+-  Variance
 
-# WORKING ON MORE
+## Simulations
+
+-  Marble Experiment binary matriz
+-  Marble Experiment weighted
+-  Marble Experiment With Complex Numbers
+-  Multiple Slits Experiment Probailistic
+-  Multiple Slits Quantum
+-  Probability of a found a particle in a certain position
+-  Transition between two vectors
+
+
 
 #### Experimento:
 1. Utilizamos los siguientes elementos : Un laser , Una hoja de papel, un marcador negro y un bisturi
@@ -54,6 +73,17 @@ Siguiendo estas reglas se obtiene el siguiente patron:
 Lo primero que se observa es que los electrones llegan a la pantalla y colisionan con ella en regiones localizadas. Esto nos lleva a pensar que se comportan como electrones.
 Si dejamos que el experimento avance, conforme se van acumulando tales colisiones vemos algo asomboroso. Se comienza a formar un patrón de franjas con áreas de mucha intensidad y areas de poca intensidad. Estamos recostruyendo un patrón de interferencias. Parece lógico que el electrón, cuando ha estado en vuelo desde las rendijas hasta la pantalla, se ha comportado como una onda.
 
+
+## Running tests
+To run automated tests just type:
+```
+mvn test
+```
+
+## Built With
+
+* [Maven](https://maven.apache.org/) - Dependency Management
+* Java
 
 ## Authors
 -  [Oscar Pinto](https://github.com/TheBaphomet666)
