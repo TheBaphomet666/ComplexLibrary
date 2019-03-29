@@ -38,6 +38,7 @@
 -  Transition Amplitude
 -  MeanValue
 -  Variance
+-  Dinamic of a Sistem
 
 ## Simulations
 

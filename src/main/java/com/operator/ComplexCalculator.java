@@ -5,6 +5,8 @@ import com.Exceptions.ComplexException;
 import com.model.ComplexMatrix;
 import com.model.ComplexNumber;
 
+import java.util.ArrayList;
+
 public class ComplexCalculator {
 
 
@@ -310,10 +312,10 @@ public class ComplexCalculator {
     }
 
     /**
-     *
-     * @param o
-     * @param k
-     * @return
+     * This method returns the Meanvalue
+     * @param o Observable mthod
+     * @param k ket vector
+     * @return the mean value between both
      * @throws ComplexException
      */
     public  static ComplexNumber meanValue(ComplexMatrix o,ComplexMatrix k) throws ComplexException {
@@ -324,10 +326,10 @@ public class ComplexCalculator {
     }
 
     /**
-     *
-     * @param o
-     * @param k
-     * @return
+     * This method returns the variance
+     * @param o observable matrix
+     * @param k Ket vector
+     * @return The variance.
      * @throws ComplexException
      */
     public static ComplexNumber variance(ComplexMatrix o, ComplexMatrix k) throws ComplexException {
@@ -346,6 +348,21 @@ public class ComplexCalculator {
         }
         return innerProduct(multiply(k.adjoint(),multiply(ComplexCalculator.substract(identity,o),ComplexCalculator.substract(identity,o))),k);
 
+    }
+
+    /**
+     * This method Returns the Dinamic of the given System
+     * @param k ket vector
+     * @param s Array of matrices
+     * @return result of the dinamic system
+     * @throws ComplexException
+     */
+    public static ComplexMatrix systemDinamic(ComplexMatrix k, ArrayList<ComplexMatrix> s) throws ComplexException {
+        ComplexMatrix res = k;
+        for(int i = 0; i< s.size(); i++){
+            res = multiply(s.get(i), res);
+        }
+        return res;
     }
 
 }

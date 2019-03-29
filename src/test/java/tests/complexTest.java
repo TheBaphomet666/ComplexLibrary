@@ -538,6 +538,42 @@ public class complexTest {
 
     }
 
+    @Test
+    public void systemDinamic(){
+
+        ComplexMatrix k = new ComplexMatrix(2, 1);
+        ComplexMatrix o1 = new ComplexMatrix(2,2);
+        ComplexMatrix o2 = new ComplexMatrix(2,2);
+        ComplexMatrix res = new ComplexMatrix(2,1);
+        try {
+
+            res.put(0,0,new ComplexNumber(1.4142135623730951,0));
+            res.put(1,0,new ComplexNumber(0,0));
+            k.put( 0, 0,new ComplexNumber(1, 0));
+            k.put( 1, 0,new ComplexNumber(1, 0));
+
+
+            o1.put(0,0,new ComplexNumber(0,0));
+            o1.put(1,0,new ComplexNumber(1,0));
+            o1.put(0,1,new ComplexNumber(1,0));
+            o1.put(1,1,new ComplexNumber(0,0));
+
+            o2.put(0,0,new ComplexNumber(Math.sqrt(2) / 2,0));
+            o2.put(1,0,new ComplexNumber(Math.sqrt(2) / 2,0));
+            o2.put(0,1,new ComplexNumber(Math.sqrt(2) / 2,0));
+            o2.put(1,1,new ComplexNumber(-Math.sqrt(2) / 2,0));
+
+            ArrayList<ComplexMatrix> orbit = new ArrayList<ComplexMatrix>();
+            orbit.add(o1);
+            orbit.add(o2);
+
+            Assert.assertEquals(res,ComplexCalculator.systemDinamic(k,orbit));
+        } catch (ComplexException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 
 
